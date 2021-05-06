@@ -1,3 +1,4 @@
+
 var getPromisify = (url, data, dataType) => {
   return new Promise((resolve, reject) => {
     $.get(url, data, (response, status, xhr) => {
@@ -34,5 +35,6 @@ var getPromisify = (url, data, dataType) => {
     }
   }
 
-  customElements.define('com-sap-sample-ajax-covid', MainWebComponent)
-})()
+  customElements.define('com-sap-sample-ajax-covid_2', MainWebComponent)
+}
+)()
