@@ -6,8 +6,12 @@
 				<legend>Run Parameters</legend>
 				<table>
 					<tr>
-						<td>Opacity</td>
-						<td><input id="builder_opacity" type="text" size="5" maxlength="5"></td>
+						<td>Environment</td>
+						<td><input id="builder_env_id" type="text" size="5" maxlength="5"></td>
+					</tr>
+					<tr>
+						<td>Version</td>
+						<td><input id="builder_ver" type="text" size="4" maxlength="5"></td>
 					</tr>
 				</table>
 				<input type="submit" style="display:none;">
