@@ -7,11 +7,19 @@
 				<table>
 					<tr>
 						<td>Environment</td>
-						<td><input id="builder_env_id" type="text" size="5" maxlength="5"></td>
+						<td><input id="builder_env_id" type="text" size="3" maxlength="10"></td>
 					</tr>
 					<tr>
 						<td>Version</td>
-						<td><input id="builder_ver" type="text" size="4" maxlength="5"></td>
+						<td><input id="builder_ver" type="text" size="10" maxlength="4"></td>
+					</tr>
+					<tr>
+						<td>Function ID</td>
+						<td><input id="builder_fid" type="text" size="5" maxlength="5"></td>
+					</tr>
+					<tr>
+						<td>Process ID</td>
+						<td><input id="builder_proc_id" type="text" size="7" maxlength="7"></td>
 					</tr>
 				</table>
 				<input type="submit" style="display:none;">
