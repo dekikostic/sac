@@ -30,6 +30,6 @@ function fetchData(url){
     }
   }
 
-  customElements.define('dk-test-covid2', MainWebComponent)
+  customElements.define('dk-test-people', MainWebComponent)
 }
 )()
