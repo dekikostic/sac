@@ -61,5 +61,5 @@
 		}
 	}
 
-	customElements.define("dk-test-covid2-builder", ColoredBoxBuilderPanel);
+	customElements.define("dk-test-people", ColoredBoxBuilderPanel);
 })();
