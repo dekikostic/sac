@@ -2,7 +2,6 @@
 var getPromisify = (url, data, dataType) => {
   return new Promise((resolve, reject) => {
     $.get(url, data, (response, status, xhr) => {
-      response.set('Access-Control-Allow-Origin', '*');
       console.log("Promise.get executed")
       if (status === 'success') {
         resolve({ response, status, xhr })
