@@ -28,7 +28,7 @@ var getPromisify = (url, data, dataType) => {
     // ------------------
     async get (url, data, dataType) {
       const r = await getPromisify(url, data, dataType)
-      return r.response.json()
+      return r.response
     }
   }
 
