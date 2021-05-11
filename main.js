@@ -32,9 +32,9 @@ var getPromisify = (url, data, dataType) => {
       console.log("Get executed")
       const r = await getPromisify(url, data, dataType)
       return [
-        r.json().response.positiveCasesViral,
-        r.json().response.positiveIncrease,
-        r.json().response.hospitalizedCurrently
+        r.response.json().positiveCasesViral,
+        r.response.json().positiveIncrease,
+        r.response.json().hospitalizedCurrently
       ]
     }
   }
