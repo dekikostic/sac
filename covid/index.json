@@ -1,12 +1,12 @@
 
 {
-	"name": "DK Ajax Covid Widget",
-	"description": "A sample custom widget wrapped jQuery ajax covid get/post",
+	"name": "DK Get Widget",
+	"description": "A sample custom widget get/post",
 	"eula": "",
 	"vendor": "",
 	"license": "",
 	"id": "dk.test.covid2",
-	"newInstancePrefix": "DKAjaxCovid",
+	"newInstancePrefix": "DKGet",
 	"version": "0.0.1",
 	"webcomponents": [
 		{
@@ -25,6 +25,11 @@
 		}
 	],
 	"properties": {
+			"env_id": {
+			"type": "string",
+			"description": "Environment",
+			"default": ""
+		}
 	},
     "methods": {
 		"get": {
@@ -32,6 +37,11 @@
 			"parameters": [
 				{
 					"name": "url",
+					"type": "string",
+					"description": ""
+				},
+				{
+					"name": "index",
 					"type": "string",
 					"description": ""
 				}
