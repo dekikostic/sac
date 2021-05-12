@@ -38,11 +38,6 @@
           "name": "url",
           "type": "string",
           "description": ""
-        },
-        {
-          "name": "index",
-          "type": "string",
-          "description": ""
         }
       ],
       "returnType": "string[]"
