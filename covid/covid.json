@@ -1,24 +1,24 @@
 {
-  "name": "DK Get Widget",
-  "description": "A sample custom widget get/post",
+  "name": "Covid Get",
+  "description": "A sample custom widget get",
   "eula": "",
   "vendor": "",
   "license": "",
   "id": "dk.test.covid",
-  "newInstancePrefix": "DKGet",
+  "newInstancePrefix": "Covid",
   "version": "0.0.1",
   "webcomponents": [
     {
       "kind": "main",
       "tag": "dk-test-covid",
-      "url": "https://dekikostic.github.io/sac/main.js",
+      "url": "https://dekikostic.github.io/sac/covid/covid_main.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "builder",
       "tag": "dk-test-covid-builder",
-      "url": "https://dekikostic.github.io/sac/covid2_builder.js",
+      "url": "https://dekikostic.github.io/sac/covid/covid_builder.js",
       "integrity": "",
       "ignoreIntegrity": true
     }
