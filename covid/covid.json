@@ -14,22 +14,9 @@
       "url": "https://dekikostic.github.io/sac/covid/covid_main.js",
       "integrity": "",
       "ignoreIntegrity": true
-    },
-    {
-      "kind": "builder",
-      "tag": "dk-test-covid-builder",
-      "url": "https://dekikostic.github.io/sac/covid/covid_builder.js",
-      "integrity": "",
-      "ignoreIntegrity": true
     }
   ],
-  "properties": {
-    "env_id": {
-      "type": "string",
-      "description": "Environment",
-      "default": ""
-    }
-  },
+  "properties": {},
   "methods": {
     "get": {
       "description": "Wrapper for jQuery get",
