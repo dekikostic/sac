@@ -1,6 +1,6 @@
 var getPromisify = (url, data, dataType) => {
   return new Promise((resolve, reject) => {
-    $.get(
+    $.post(
       url,
       data,
       (response, status, xhr) => {
