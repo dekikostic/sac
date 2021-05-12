@@ -27,7 +27,18 @@
   "methods": {
     "get": {
       "description": "Wrapper for jQuery get",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "url",
+          "type": "string",
+          "description": ""
+        },
+        {
+          "name": "index",
+          "type": "string",
+          "description": ""
+        }
+      ],
       "returnType": "string[]"
     }
   },
