@@ -40,5 +40,5 @@ var getPromisify = (url, data, dataType) => {
     }
   }
 
-  customElements.define("dk-test-covid2", MainWebComponent);
+  customElements.define("dk-test-covid", MainWebComponent);
 })();
