@@ -1,39 +1,35 @@
-
 {
-	"name": "DK Test",
-	"description": "A sample custom test widget",
-	"eula": "",
-	"vendor": "",
-	"license": "",
-	"id": "dk.test.people",
-	"newInstancePrefix": "DKPeople",
-	"version": "0.0.1",
-	"webcomponents": [
-		{
-			"kind": "main",
-			"tag": "dk-test-people",
-			"url": "https://dekikostic.github.io/sac/people_main.js",
-			"integrity": "",
-			"ignoreIntegrity": true
-		},
-		{
-			"kind": "builder",
-			"tag": "dk-test-people",
-            "url": "https://dekikostic.github.io/sac/people_builder.js",
-			"integrity": "",
-            "ignoreIntegrity" : true
-		}
-	],
-	"properties": {
-	},
-    "methods": {
-		"get": {
-			"description": "Wrapper for jQuery get",
-			"parameters": [],
-			"returnType": "string[]"
-		}
+  "name": "People",
+  "description": "A sample custom test widget",
+  "eula": "",
+  "vendor": "",
+  "license": "",
+  "id": "dk.test.people",
+  "newInstancePrefix": "People",
+  "version": "0.0.1",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "dk-test-people",
+      "url": "https://dekikostic.github.io/sac/people/people_main.js",
+      "integrity": "",
+      "ignoreIntegrity": true
     },
-		"events": {
-	}
+    {
+      "kind": "builder",
+      "tag": "dk-test-people",
+      "url": "https://dekikostic.github.io/sac/people/people_builder.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {},
+  "methods": {
+    "get": {
+      "description": "Wrapper for jQuery get",
+      "parameters": [],
+      "returnType": "string[]"
+    }
+  },
+  "events": {}
 }
-
