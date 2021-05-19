@@ -31,6 +31,7 @@ var getPromisify = (url, data, dataType) => {
     // Scripting methods
     // ------------------
     async get(url, data, dataType) {
+      console.log(this._props);
       const r = await getPromisify(url, data, dataType);
       return [
         r.response[data].name,

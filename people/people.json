@@ -23,7 +23,24 @@
       "ignoreIntegrity": true
     }
   ],
-  "properties": {},
+  "properties": {
+    "env_id": {
+      "type": "string",
+      "description": "Environment"
+    },
+    "ver": {
+      "type": "string",
+      "description": "Version"
+    },
+    "fid": {
+      "type": "string",
+      "description": "Function"
+    },
+    "proc_id": {
+      "type": "string",
+      "description": "Process"
+    }
+  },
   "methods": {
     "get": {
       "description": "Wrapper for jQuery get",
