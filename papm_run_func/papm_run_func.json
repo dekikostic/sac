@@ -5,7 +5,7 @@
   "vendor": "",
   "license": "",
   "id": "papm.run.func",
-  "newInstancePrefix": "People",
+  "newInstancePrefix": "RunFunc",
   "version": "0.0.1",
   "webcomponents": [
     {
