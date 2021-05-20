@@ -17,7 +17,7 @@
     },
     {
       "kind": "builder",
-      "tag": "papm-run-func",
+      "tag": "papm-run-func-builder",
       "url": "https://dekikostic.github.io/sac/papm_run_func/builder.js",
       "integrity": "",
       "ignoreIntegrity": true

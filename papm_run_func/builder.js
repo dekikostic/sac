@@ -65,5 +65,5 @@
     }
   }
 
-  customElements.define("papm-run-func", RunFunctionBuilderPanel);
+  customElements.define("papm-run-func-builder", RunFunctionBuilderPanel);
 })();
