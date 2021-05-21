@@ -40,6 +40,7 @@ var getPromisify = (url, data, dataType) => {
       //   r.response[data].age,
       //   r.response[data].gender,
       // ];
+      return "Done";
     }
   }
 
