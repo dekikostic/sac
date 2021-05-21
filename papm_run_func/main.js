@@ -1,22 +1,22 @@
-// var getPromisify = (url, data, dataType) => {
-//   return new Promise((resolve, reject) => {
-//     $.get(
-//       url,
-//       data,
-//       (response, status, xhr) => {
-//         if (status === "success") {
-//           resolve({ response, status, xhr });
-//         } else {
-//           const err = new Error("xhr error");
-//           err.target = xhr;
-//           reject(err);
-//           console.log("xhr error");
-//         }
-//       },
-//       dataType
-//     );
-//   });
-// };
+var getPromisify = (url, data, dataType) => {
+  return new Promise((resolve, reject) => {
+    $.get(
+      url,
+      data,
+      (response, status, xhr) => {
+        if (status === "success") {
+          resolve({ response, status, xhr });
+        } else {
+          const err = new Error("xhr error");
+          err.target = xhr;
+          reject(err);
+          console.log("xhr error");
+        }
+      },
+      dataType
+    );
+  });
+};
 
 (function () {
   const template = document.createElement("template");
@@ -33,14 +33,13 @@
     async get(url, data, dataType) {
       // console.log(`Properties: ${this._props}`);
       // console.log(`Env id: ${this._props[env_id]}`);
-      // const r = await getPromisify(url, data, dataType);
+      const r = await getPromisify(url, data, dataType);
       // console.log(r);
-      // return [
-      //   r.response[data].name,
-      //   r.response[data].age,
-      //   r.response[data].gender,
-      // ];
-      return url;
+      return [
+        r.response[data].name,
+        r.response[data].age,
+        r.response[data].gender,
+      ];
     }
   }
 
