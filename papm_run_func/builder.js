@@ -56,6 +56,11 @@
       );
     }
 
+    onCustomWidgetBeforeUpdate(changedProperties) {
+      // ...
+      console.log(`${this._props["RunFunc"]}`);
+    }
+
     set env_id(env_id) {
       this._shadowRoot.getElementById("builder_env_id").value = env_id;
     }
