@@ -30,7 +30,7 @@ var getPromisify = (url, data, dataType) => {
     // ------------------
     // Scripting methods
     // ------------------
-    async get(url, data, dataType) {
+    async run(url, data, dataType) {
       // console.log(`Properties: ${this._props}`);
       // console.log(`Env id: ${this._props[env_id]}`);
       const r = await getPromisify(url, data, dataType);
