@@ -26,12 +26,19 @@ var getPromisify = (url, data, dataType) => {
       <div id="root" style="width: 100%; height: 100%;">
       </div>
     `;
+
   class MainWebComponent extends HTMLElement {
+    constructor() {
+      super();
+      let shadowRoot = this.attachShadow({ mode: "open" });
+      shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+
     // ------------------
     // Scripting methods
     // ------------------
     async run(url, data, dataType) {
-      console.log(`This: ${this}`);
+      console.log(`shadowRoot: ${shadowRoot}`);
       // console.log(`Env id: ${this._props[env_id]}`);
       // const r = await getPromisify(url, data, dataType);
       // console.log(r);
