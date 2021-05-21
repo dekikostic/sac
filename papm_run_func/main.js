@@ -33,13 +33,14 @@ var getPromisify = (url, data, dataType) => {
     async run(url, data, dataType) {
       // console.log(`Properties: ${this._props}`);
       // console.log(`Env id: ${this._props[env_id]}`);
-      const r = await getPromisify(url, data, dataType);
+      // const r = await getPromisify(url, data, dataType);
       // console.log(r);
-      return [
-        r.response[data].name,
-        r.response[data].age,
-        r.response[data].gender,
-      ];
+      // return [
+      //   r.response[data].name,
+      //   r.response[data].age,
+      //   r.response[data].gender,
+      // ];
+      return url;
     }
   }
 
