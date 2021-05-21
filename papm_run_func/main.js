@@ -1,22 +1,22 @@
-var getPromisify = (url, data, dataType) => {
-  return new Promise((resolve, reject) => {
-    $.post(
-      url,
-      data,
-      (response, status, xhr) => {
-        if (status === "success") {
-          resolve({ response, status, xhr });
-        } else {
-          const err = new Error("xhr error");
-          err.target = xhr;
-          reject(err);
-          console.log("xhr error");
-        }
-      },
-      dataType
-    );
-  });
-};
+// var getPromisify = (url, data, dataType) => {
+//   return new Promise((resolve, reject) => {
+//     $.get(
+//       url,
+//       data,
+//       (response, status, xhr) => {
+//         if (status === "success") {
+//           resolve({ response, status, xhr });
+//         } else {
+//           const err = new Error("xhr error");
+//           err.target = xhr;
+//           reject(err);
+//           console.log("xhr error");
+//         }
+//       },
+//       dataType
+//     );
+//   });
+// };
 
 (function () {
   const template = document.createElement("template");
@@ -40,7 +40,7 @@ var getPromisify = (url, data, dataType) => {
       //   r.response[data].age,
       //   r.response[data].gender,
       // ];
-      return "Done";
+      return url;
     }
   }
 
