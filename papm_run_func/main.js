@@ -43,11 +43,8 @@ var getPromisify = (url, data, dataType) => {
     // Scripting methods
     // ------------------
     async run(url, data, dataType) {
-      let papm_url = `https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV/RunAsync
-        ?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&Fid='${this._props.fid}'`;
+      let papm_url = `https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&Fid='${this._props.fid}'`;
       console.log(papm_url);
-      // console.log(`shadowRoot: ${}`);
-      // console.log(`Env id: ${this._props[env_id]}`);
       // const r = await getPromisify(url, data, dataType);
       // console.log(r);
       // return [

@@ -17,10 +17,6 @@
 						<td>Function ID</td>
 						<td><input id="builder_fid" type="text" size="10" maxlength="5"></td>
 					</tr>
-					// <tr>
-					// 	<td>Process ID</td>
-					// 	<td><input id="builder_proc_id" type="text" size="10" maxlength="7"></td>
-					// </tr>
 				</table>
 				<input type="submit" style="display:none;">
 			</fieldset>
