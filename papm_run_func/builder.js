@@ -75,6 +75,9 @@
     get env_id() {
       return this._shadowRoot.getElementById("builder_env_id").value;
     }
+    get ver() {
+      return this._shadowRoot.getElementById("builder_ver").value;
+    }
   }
 
   customElements.define("papm-run-func-builder", RunFunctionBuilderPanel);
