@@ -33,12 +33,16 @@ var getPromisify = (url, data, dataType) => {
       let shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(template.content.cloneNode(true));
     }
+    onCustomWidgetBeforeUpdate(changedProperties) {
+      this._props = { ...this._props, ...changedProperties };
+    }
+
     onCustomWidgetAfterUpdate(changedProperties) {
       if ("env_id" in changedProperties) {
-        console.log(changedProperties["color"]);
+        console.log(changedProperties["env_idr"]);
       }
       if ("ver" in changedProperties) {
-        console.log(changedProperties["opacity"]);
+        console.log(changedProperties["ver"]);
       }
     }
 
