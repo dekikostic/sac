@@ -39,7 +39,8 @@ var getPromisify = (url, data, dataType) => {
 
     onCustomWidgetAfterUpdate(changedProperties) {
       if ("env_id" in changedProperties) {
-        console.log(changedProperties["env_idr"]);
+        var env_id = changedProperties["env_id"];
+        console.log(env_id);
       }
       if ("ver" in changedProperties) {
         console.log(changedProperties["ver"]);

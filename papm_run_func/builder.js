@@ -50,20 +50,27 @@
           detail: {
             properties: {
               env_id: this.env_id,
+              ver: this.ver,
+              fid: this.fid,
+              prc_id: this.proc_id,
             },
           },
         })
       );
     }
 
-    // onCustomWidgetBeforeUpdate(changedProperties) {
-    //   // ...
-    //   console.log(`${this._props["RunFunc"]}`);
-    // }
-
     set env_id(env_id) {
       this._shadowRoot.getElementById("builder_env_id").value = env_id;
     }
+    // set ver(ver) {
+    //   this._shadowRoot.getElementById("builder_ver").value = ver;
+    // }
+    // set env_id(fid) {
+    //   this._shadowRoot.getElementById("builder_fid").value = fid;
+    // }
+    // set proc_id(proc_id) {
+    //   this._shadowRoot.getElementById("builder_proc_id").value = proc_id;
+    // }
 
     get env_id() {
       return this._shadowRoot.getElementById("builder_env_id").value;
