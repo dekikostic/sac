@@ -38,6 +38,7 @@ var getPromisify = (url, data, dataType) => {
     // Scripting methods
     // ------------------
     async run(url, data, dataType) {
+      console.log(`${this._props["RunFunc_1"]}`);
       // console.log(`shadowRoot: ${}`);
       // console.log(`Env id: ${this._props[env_id]}`);
       // const r = await getPromisify(url, data, dataType);
