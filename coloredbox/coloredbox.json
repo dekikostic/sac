@@ -1,7 +1,7 @@
 {
   "id": "dk.sample.coloredbox",
   "version": "0.0.1",
-  "name": "Colored Box",
+  "name": "DK Colored Box",
   "description": "A colored box",
   "newInstancePrefix": "ColoredBox",
   "vendor": "",
@@ -39,7 +39,7 @@
     "opacity": {
       "type": "number",
       "description": "Opacity",
-      "default": "1"
+      "default": 1
     },
     "width": {
       "type": "integer",

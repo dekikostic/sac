@@ -1,6 +1,6 @@
-(function()  {
-	let template = document.createElement("template");
-	template.innerHTML = `
+(function () {
+  let template = document.createElement("template");
+  template.innerHTML = `
 		<form id="form">
 			<fieldset>
 				<legend>Colored Box Properties</legend>
@@ -15,32 +15,37 @@
 		</form>
 	`;
 
-	class ColoredBoxStylingPanel extends HTMLElement {
-		constructor() {
-			super();
-			this._shadowRoot = this.attachShadow({mode: "open"});
-			this._shadowRoot.appendChild(template.content.cloneNode(true));
-			this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
-		}
+  class ColoredBoxStylingPanel extends HTMLElement {
+    constructor() {
+      super();
+      this._shadowRoot = this.attachShadow({ mode: "open" });
+      this._shadowRoot.appendChild(template.content.cloneNode(true));
+      this._shadowRoot
+        .getElementById("form")
+        .addEventListener("submit", this._submit.bind(this));
+    }
 
-		_submit(e) {
-			e.preventDefault();
-			this.dispatchEvent(new CustomEvent("propertiesChanged", {
-					detail: {
-						properties: {
-							color: this.color
-						}
-					}
-			}));
-		}
+    _submit(e) {
+      e.preventDefault();
+      this.dispatchEvent(
+        new CustomEvent("propertiesChanged", {
+          detail: {
+            properties: {
+              color: this.color,
+            },
+          },
+        })
+      );
+    }
 
-		set color(newColor) {
-			this._shadowRoot.getElementById("styling_color").value = newColor;
-		}
+    set color(newColor) {
+      this._shadowRoot.getElementById("styling_color").value = newColor;
+    }
 
-		get color() {
-			return this._shadowRoot.getElementById("styling_color").value;
-		}
-	}
+    get color() {
+      return this._shadowRoot.getElementById("styling_color").value;
+    }
+  }
 
-customElements.define("dk-sample-coloredbox-styling", ColoredBoxStylingPanel);
+  customElements.define("dk-sample-coloredbox-styling", ColoredBoxStylingPanel);
+})();
