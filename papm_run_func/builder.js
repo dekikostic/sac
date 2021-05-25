@@ -62,9 +62,9 @@
     set env_id(env_id) {
       this._shadowRoot.getElementById("builder_env_id").value = env_id;
     }
-    // set ver(ver) {
-    //   this._shadowRoot.getElementById("builder_ver").value = ver;
-    // }
+    set ver(ver) {
+      this._shadowRoot.getElementById("builder_ver").value = ver;
+    }
     // set env_id(fid) {
     //   this._shadowRoot.getElementById("builder_fid").value = fid;
     // }
