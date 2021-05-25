@@ -53,10 +53,10 @@ var getPromisify = (url, data, dataType) => {
     async run(url, data, dataType) {
       let base_url =
         "https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV/RunAsync";
-      let url =
+      let papm_url =
         base_url &&
         `?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&Fid='${this._props.fid}'`;
-      console.log(url);
+      console.log(papm_url);
       // console.log(`shadowRoot: ${}`);
       // console.log(`Env id: ${this._props[env_id]}`);
       // const r = await getPromisify(url, data, dataType);
@@ -66,7 +66,7 @@ var getPromisify = (url, data, dataType) => {
       //   r.response[data].age,
       //   r.response[data].gender,
       // ];
-      return url;
+      return papm_url;
     }
   }
 
