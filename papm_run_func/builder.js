@@ -17,10 +17,10 @@
 						<td>Function ID</td>
 						<td><input id="builder_fid" type="text" size="10" maxlength="5"></td>
 					</tr>
-					<tr>
-						<td>Process ID</td>
-						<td><input id="builder_proc_id" type="text" size="10" maxlength="7"></td>
-					</tr>
+					// <tr>
+					// 	<td>Process ID</td>
+					// 	<td><input id="builder_proc_id" type="text" size="10" maxlength="7"></td>
+					// </tr>
 				</table>
 				<input type="submit" style="display:none;">
 			</fieldset>
@@ -68,9 +68,9 @@
     set fid(fid) {
       this._shadowRoot.getElementById("builder_fid").value = fid;
     }
-    set proc_id(proc_id) {
-      this._shadowRoot.getElementById("builder_proc_id").value = proc_id;
-    }
+    // set proc_id(proc_id) {
+    //   this._shadowRoot.getElementById("builder_proc_id").value = proc_id;
+    // }
 
     get env_id() {
       return this._shadowRoot.getElementById("builder_env_id").value;
@@ -81,9 +81,9 @@
     get fid() {
       return this._shadowRoot.getElementById("builder_fid").value;
     }
-    get proc_id() {
-      return this._shadowRoot.getElementById("builder_proc_id").value;
-    }
+    // get proc_id() {
+    //   return this._shadowRoot.getElementById("builder_proc_id").value;
+    // }
   }
 
   customElements.define("papm-run-func-builder", RunFunctionBuilderPanel);
