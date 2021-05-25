@@ -65,18 +65,24 @@
     set ver(ver) {
       this._shadowRoot.getElementById("builder_ver").value = ver;
     }
-    // set env_id(fid) {
-    //   this._shadowRoot.getElementById("builder_fid").value = fid;
-    // }
-    // set proc_id(proc_id) {
-    //   this._shadowRoot.getElementById("builder_proc_id").value = proc_id;
-    // }
+    set fid(fid) {
+      this._shadowRoot.getElementById("builder_fid").value = fid;
+    }
+    set proc_id(proc_id) {
+      this._shadowRoot.getElementById("builder_proc_id").value = proc_id;
+    }
 
     get env_id() {
       return this._shadowRoot.getElementById("builder_env_id").value;
     }
     get ver() {
       return this._shadowRoot.getElementById("builder_ver").value;
+    }
+    get fid() {
+      return this._shadowRoot.getElementById("builder_fid").value;
+    }
+    get proc_id() {
+      return this._shadowRoot.getElementById("builder_proc_id").value;
     }
   }
 

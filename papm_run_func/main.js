@@ -33,25 +33,30 @@ var getPromisify = (url, data, dataType) => {
       let shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(template.content.cloneNode(true));
     }
-    onCustomWidgetBeforeUpdate(changedProperties) {
-      this._props = { ...this._props, ...changedProperties };
-    }
+    // onCustomWidgetBeforeUpdate(changedProperties) {
+    //   this._props = { ...this._props, ...changedProperties };
+    // }
 
-    onCustomWidgetAfterUpdate(changedProperties) {
-      if ("env_id" in changedProperties) {
-        var env_id = changedProperties["env_id"];
-        console.log(env_id);
-      }
-      if ("ver" in changedProperties) {
-        console.log(changedProperties["ver"]);
-      }
-    }
+    // onCustomWidgetAfterUpdate(changedProperties) {
+    //   if ("env_id" in changedProperties) {
+    //     var env_id = changedProperties["env_id"];
+    //     console.log(env_id);
+    //   }
+    //   if ("ver" in changedProperties) {
+    //     console.log(changedProperties["ver"]);
+    //   }
+    // }
 
     // ------------------
     // Scripting methods
     // ------------------
     async run(url, data, dataType) {
-      console.log(`${this._props["RunFunc_1"]}`);
+      let base_url =
+        "https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV/RunAsync?EnvId=";
+      let url =
+        base_url &&
+        `EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&Fid='${this._props.fid}'`;
+      console.log(url);
       // console.log(`shadowRoot: ${}`);
       // console.log(`Env id: ${this._props[env_id]}`);
       // const r = await getPromisify(url, data, dataType);
