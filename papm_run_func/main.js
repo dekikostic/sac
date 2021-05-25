@@ -33,19 +33,19 @@ var getPromisify = (url, data, dataType) => {
       let shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(template.content.cloneNode(true));
     }
-    // onCustomWidgetBeforeUpdate(changedProperties) {
-    //   this._props = { ...this._props, ...changedProperties };
-    // }
+    onCustomWidgetBeforeUpdate(changedProperties) {
+      this._props = { ...this._props, ...changedProperties };
+    }
 
-    // onCustomWidgetAfterUpdate(changedProperties) {
-    //   if ("env_id" in changedProperties) {
-    //     var env_id = changedProperties["env_id"];
-    //     console.log(env_id);
-    //   }
-    //   if ("ver" in changedProperties) {
-    //     console.log(changedProperties["ver"]);
-    //   }
-    // }
+    onCustomWidgetAfterUpdate(changedProperties) {
+      if ("env_id" in changedProperties) {
+        var env_id = changedProperties["env_id"];
+        console.log(env_id);
+      }
+      if ("ver" in changedProperties) {
+        console.log(changedProperties["ver"]);
+      }
+    }
 
     // ------------------
     // Scripting methods
