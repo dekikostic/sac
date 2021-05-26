@@ -43,8 +43,12 @@ var getPromisify = (url, data, dataType) => {
     // Scripting methods
     // ------------------
     async run(url, data, dataType) {
-      let papm_url = `https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&Fid='${this._props.fid}'`;
-      console.log(papm_url);
+      let defaultUrl =
+        "https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV/RunAsync";
+      let papmUrl =
+        (url !== "" ? url : defaultUrl) +
+        `?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&Fid='${this._props.fid}'`;
+      console.log(papmUrl);
       // const r = await getPromisify(url, data, dataType);
       // console.log(r);
       // return [
