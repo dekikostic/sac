@@ -1,6 +1,6 @@
 var getPromisify = (url, data, dataType) => {
   return new Promise((resolve, reject) => {
-    $.get(
+    $.post(
       url,
       data,
       (response, status, xhr) => {
@@ -49,14 +49,13 @@ var getPromisify = (url, data, dataType) => {
         (url !== "" ? url : defaultUrl) +
         `?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&Fid='${this._props.fid}'`;
       console.log(papmUrl);
-      // const r = await getPromisify(url, data, dataType);
+      const r = await getPromisify(url, data, dataType);
       // console.log(r);
       // return [
       //   r.response[data].name,
       //   r.response[data].age,
       //   r.response[data].gender,
       // ];
-      return papmUrl;
     }
   }
 
