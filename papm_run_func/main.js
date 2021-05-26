@@ -56,7 +56,7 @@ var getPromisify = (url, data, dataType) => {
       //   r.response[data].age,
       //   r.response[data].gender,
       // ];
-      return papm_url;
+      return papmUrl;
     }
   }
 
