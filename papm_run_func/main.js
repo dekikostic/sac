@@ -48,14 +48,7 @@ var getPromisify = (url, data, dataType) => {
       let papmUrl =
         (url !== "" ? url : defaultUrl) +
         `?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&Fid='${this._props.fid}'`;
-      console.log(papmUrl);
       const r = await getPromisify(papmUrl, data, dataType);
-      // console.log(r);
-      // return [
-      //   r.response[data].name,
-      //   r.response[data].age,
-      //   r.response[data].gender,
-      // ];
     }
   }
 
