@@ -37,7 +37,9 @@ var getPromisify = (url, data, dataType) => {
       this._props = { ...this._props, ...changedProperties };
     }
 
-    onCustomWidgetAfterUpdate(changedProperties) {}
+    onCustomWidgetAfterUpdate(changedProperties) {
+      this._props = { ...this._props, ...changedProperties };
+    }
 
     // ------------------
     // Scripting methods
