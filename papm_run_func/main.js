@@ -49,9 +49,8 @@ var getPromisify = (url, data, dataType) => {
         "https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV/RunAsync";
       let papmUrl =
         (url !== "" ? url : defaultUrl) +
-        `?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&Fid='${this._props.fid}'`;
+        `?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
       const r = await getPromisify(papmUrl, data, dataType);
-      console.log(r);
     }
   }
 
