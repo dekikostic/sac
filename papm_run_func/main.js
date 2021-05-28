@@ -32,7 +32,7 @@
 
       let runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
 
-      let tokenRequest = await fetch(`${papmUrl}'/$metadata`, {
+      let tokenRequest = await fetch(`${papmUrl}/$metadata`, {
         headers: { "x-csrf-token": "Fetch" },
       }).catch((error) => {
         console.error("Error:", error);
