@@ -28,7 +28,7 @@
       const defaultUrl =
         "https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV"; //RunAsync
 
-      papmUrl = url !== "" ? url : defaultUrl;
+      let papmUrl = url !== "" ? url : defaultUrl;
 
       let runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
 
