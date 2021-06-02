@@ -25,7 +25,7 @@
     // Scripting methods
     // ------------------
     async run(url) {
-      const baseltUrl =
+      const baseUrl =
         "https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV";
 
       const runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
