@@ -25,24 +25,27 @@
     // Scripting methods
     // ------------------
     async run(url) {
-      const defaultUrl =
-        "https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV"; //RunAsync
+      const baseltUrl =
+        "https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV";
 
-      let papmUrl = url !== "" ? url : defaultUrl;
+      const runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
 
-      let runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
+      try {
+        const tokenRequest = await fetch(`${baseUrl}/$metadata`, {
+          headers: { "x-csrf-token": "Fetch" },
+        });
 
-      let tokenRequest = await fetch(`${papmUrl}/$metadata`, {
-        headers: { "x-csrf-token": "Fetch" },
-      }).catch((error) => {
-        console.error("Error:", error);
-      });
+        const csrfToken = tokenRequest.headers.get("x-csrf-token");
+        let runRequest = await fetch(`${baseUrl}${runParams}`, {
+          method: "POST",
+          headers: { "x-csrf-token": csrfToken },
+        });
 
-      let csrfToken = tokenRequest.headers.get("x-csrf-token");
-      let runRequest = await fetch(`${papmUrl}${runParams}`, {
-        method: "POST",
-        headers: { "x-csrf-token": csrfToken },
-      });
+        const response = await runRequest.json();
+        const runId = response.d.Content.RUN_ID;
+      } catch (status) {
+        console.log(status);
+      }
     }
   }
 
