@@ -31,20 +31,25 @@
       const runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
 
       try {
-        const tokenRequest = await fetch(`${baseUrl}/$metadata`, {
-          headers: { "x-csrf-token": "Fetch" },
-        });
+        // const tokenRequest = await fetch(`${baseUrl}/$metadata`, {
+        //   headers: { "x-csrf-token": "Fetch" },
+        // });
+        // const csrfToken = tokenRequest.headers.get("x-csrf-token");
 
-        const csrfToken = tokenRequest.headers.get("x-csrf-token");
         let runRequest = await fetch(`${baseUrl}${runParams}`, {
           method: "POST",
-          headers: { "x-csrf-token": csrfToken },
+          // headers: { "x-csrf-token": csrfToken },
         });
 
         const response = await runRequest.json();
-        const runId = response.d.Content.RUN_ID;
+
+        let runMsgRequest = await fetch(
+          `${baseUrl}/Entities/ALMSG?$filter=RUN_ID eq${response.d.Content.RUN_ID}`
+        );
+        let msg = await runMsgRequest.json();
+        return msg.value;
       } catch (status) {
-        console.log(status);
+        new Error();
       }
     }
   }
