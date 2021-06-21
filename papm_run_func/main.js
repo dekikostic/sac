@@ -31,25 +31,30 @@
       const runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
 
       try {
-        const tokenRequest = await fetch(
-          `${baseUrl}/$metadata`
-          // , {
-          //   headers: { "x-csrf-token": "Fetch" },
-          // }
-        );
-        // const csrfToken = tokenRequest.headers.get("x-csrf-token");
+        const tokenRequest = await fetch(`${baseUrl}/$metadata`, {
+          headers: { "x-csrf-token": "Fetch" },
+        });
+        const csrfToken = tokenRequest.headers.get("x-csrf-token");
 
         let runRequest = await fetch(`${baseUrl}${runParams}`, {
           method: "POST",
           // headers: { "x-csrf-token": csrfToken },
         });
 
-        const response = await runRequest.json();
+        const runResponse = await runRequest.json();
 
-        let runMsgRequest = await fetch(
-          `${baseUrl}/Entities/ALMSG?$filter=RUN_ID eq${response.d.Content.RUN_ID}`
-        );
-        let msg = await runMsgRequest.json();
+        let runStatusRequest = () => {
+          await fetch(
+            `${baseUrl}/Entities/AL?$filter=RUN_ID eq${runResponse.d.Content.RUN_ID}`
+          );
+        };
+
+        let runState = "RUNNING";
+        while (runState === "RUNNING") {
+          setTimeout(runStatusRequest, 1000);
+          runState = await runMsgRequest.json().value;
+        }
+
         return msg.value;
       } catch (status) {
         new Error();
