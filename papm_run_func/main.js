@@ -38,7 +38,7 @@
 
         let runRequest = await fetch(`${baseUrl}${runParams}`, {
           method: "POST",
-          // headers: { "x-csrf-token": csrfToken },
+          headers: { "x-csrf-token": csrfToken },
         });
 
         const runResponse = await runRequest.json();
