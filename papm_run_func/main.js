@@ -31,9 +31,12 @@
       const runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
 
       try {
-        // const tokenRequest = await fetch(`${baseUrl}/$metadata`, {
-        //   headers: { "x-csrf-token": "Fetch" },
-        // });
+        const tokenRequest = await fetch(
+          `${baseUrl}/$metadata`
+          // , {
+          //   headers: { "x-csrf-token": "Fetch" },
+          // }
+        );
         // const csrfToken = tokenRequest.headers.get("x-csrf-token");
 
         let runRequest = await fetch(`${baseUrl}${runParams}`, {
