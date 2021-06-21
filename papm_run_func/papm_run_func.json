@@ -39,19 +39,16 @@
     "proc_id": {
       "type": "string",
       "description": "Process"
+    },
+    "activity": {
+      "type": "string",
+      "description": "Activity"
     }
   },
   "methods": {
     "run": {
       "description": "Run PaPM Function",
-      "parameters": [
-        {
-          "name": "url",
-          "type": "string",
-          "description": ""
-        }
-      ],
-      "returnType": "string[]"
+      "returnType": "[]"
     }
   },
   "events": {}
