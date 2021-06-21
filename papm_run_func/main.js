@@ -43,19 +43,19 @@
 
         const runResponse = await runRequest.json();
 
-        let runStatusRequest = () => {
-          await fetch(
-            `${baseUrl}/Entities/AL?$filter=RUN_ID eq${runResponse.d.Content.RUN_ID}`
-          );
-        };
+        // let runStatusRequest = () => {
+        //   await fetch(
+        //     `${baseUrl}/Entities/AL?$filter=RUN_ID eq${runResponse.d.Content.RUN_ID}`
+        //   );
+        // };
 
-        let runState = "RUNNING";
-        while (runState === "RUNNING") {
-          setTimeout(runStatusRequest, 1000);
-          runState = await runMsgRequest.json().value;
-        }
+        // let runState = "RUNNING";
+        // while (runState === "RUNNING") {
+        //   setTimeout(runStatusRequest, 1000);
+        //   runState = await runMsgRequest.json().value;
+        // }
 
-        return msg.value;
+        // return msg.value;
       } catch (status) {
         new Error();
       }
