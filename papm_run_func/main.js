@@ -30,12 +30,14 @@
 
       try {
         const tokenRequest = await fetch(`${BASE_URL}/$metadata`, {
+          credential: "include",
           headers: { "x-csrf-token": "Fetch" },
         });
         const csrfToken = tokenRequest.headers.get("x-csrf-token");
 
         const runRequest = await fetch(`${BASE_URL}${runParams}`, {
           method: "POST",
+          credential: "include",
           headers: { "x-csrf-token": csrfToken },
         });
 
