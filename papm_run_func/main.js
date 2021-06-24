@@ -21,22 +21,20 @@
       this._props = { ...this._props, ...changedProperties };
     }
 
-    // ------------------
-    // Scripting methods
-    // ------------------
+    //function called from SAC Analytic Application
     async run(url) {
-      const baseUrl =
+      const BASE_URL =
         "https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV";
 
       const runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
 
       try {
-        const tokenRequest = await fetch(`${baseUrl}/$metadata`, {
+        const tokenRequest = await fetch(`${BASE_URL}/$metadata`, {
           headers: { "x-csrf-token": "Fetch" },
         });
         const csrfToken = tokenRequest.headers.get("x-csrf-token");
 
-        let runRequest = await fetch(`${baseUrl}${runParams}`, {
+        const runRequest = await fetch(`${BASE_URL}${runParams}`, {
           method: "POST",
           headers: { "x-csrf-token": csrfToken },
         });
