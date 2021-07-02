@@ -26,16 +26,18 @@
       const BASE_URL =
         "https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV";
 
+      const papmUrl = url != "" ? url : BASE_URL;
+
       const runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
 
       try {
-        const tokenRequest = await fetch(`${BASE_URL}/$metadata`, {
+        const tokenRequest = await fetch(`${papmUrl}/$metadata`, {
           credentials: "include",
           headers: { "x-csrf-token": "Fetch" },
         });
         const csrfToken = tokenRequest.headers.get("x-csrf-token");
 
-        const runRequest = await fetch(`${BASE_URL}${runParams}`, {
+        const runRequest = await fetch(`${papmUrl}${runParams}`, {
           method: "POST",
           credentials: "include",
           headers: { "x-csrf-token": csrfToken },
