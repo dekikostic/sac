@@ -31,11 +31,11 @@
       const runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
 
       try {
-        // const tokenRequest = await fetch(`${papmUrl}/$metadata`, {
-        //   credentials: "include",
-        //   headers: { "x-csrf-token": "Fetch" },
-        // });
-        // const csrfToken = tokenRequest.headers.get("x-csrf-token");
+        const tokenRequest = await fetch(`${papmUrl}/$metadata`, {
+          credentials: "include",
+          headers: { "x-csrf-token": "Fetch" },
+        });
+        const csrfToken = tokenRequest.headers.get("x-csrf-token");
 
         const runRequest = await fetch(`${papmUrl}${runParams}`, {
           method: "POST",
