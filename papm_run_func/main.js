@@ -33,6 +33,13 @@
       try {
         const runRequest = await fetch(`${papmUrl}`, {
           method: "POST",
+          body: {
+            envId: this._props.env_id,
+            ver: this._props.ver,
+            procId: this._props.procId,
+            activity: "",
+            fid: this._props.fid,
+          },
           // credentials: "include",
           // headers: { "x-csrf-token": "Fetch" },
         });
