@@ -30,18 +30,18 @@
 
       // const runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
 
+      const raw = JSON.stringify({
+        envId: this._props.env_id,
+        ver: this._props.ver,
+        procId: this._props.procId,
+        activity: "",
+        fid: this._props.fid,
+      });
+
       try {
         const runRequest = await fetch(`${papmUrl}`, {
           method: "POST",
-          body: {
-            envId: this._props.env_id,
-            ver: this._props.ver,
-            procId: this._props.procId,
-            activity: "",
-            fid: this._props.fid,
-          },
-          // credentials: "include",
-          // headers: { "x-csrf-token": "Fetch" },
+          body: raw,
         });
         //   const csrfToken = tokenRequest.headers.get("x-csrf-token");
 
