@@ -30,11 +30,12 @@
 
       // const runParams = `/RunAsync?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`;
 
+      let env_id = this._props.env_id;
       const raw = JSON.stringify({
-        envId: this._props.env_id,
+        envId: env_id,
         ver: this._props.ver,
         procId: this._props.procId,
-        activity: "",
+        activity: "TEST",
         fid: this._props.fid,
       });
 
