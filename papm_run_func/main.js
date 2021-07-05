@@ -42,6 +42,9 @@
       try {
         const runRequest = await fetch(`${papmUrl}`, {
           method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
           body: raw,
         });
         //   const csrfToken = tokenRequest.headers.get("x-csrf-token");
