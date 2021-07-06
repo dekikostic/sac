@@ -23,7 +23,8 @@
 
     //function called from SAC Analytic Application
     async run(url) {
-      const BASE_URL = "http://localhost:3000/products";
+      const BASE_URL = "http://localhost:3500/runAsync";
+      // const BASE_URL = "http://localhost:3000/products";
       // "https://qam-papm.prod-dev.papm.cloud.sap/sap/opu/odata/NXI/P1_N_MOD_SRV";
 
       const papmUrl = url != "" ? url : BASE_URL;
