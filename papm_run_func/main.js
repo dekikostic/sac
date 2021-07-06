@@ -45,9 +45,10 @@
           `${papmUrl}?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`,
           {
             method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
+            mode: "no-cors",
+            // headers: {
+            //   "Content-Type": "application/json",
+            // },
             // body: raw,
           }
         );
