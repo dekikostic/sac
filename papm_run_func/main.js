@@ -46,7 +46,7 @@
       //   new Error();
       // }
       fetch(
-        "localhost:3500/runAsync?EnvId='SXP'&Ver='0007'&ProcId=''&Activity=''&Fid='CAACD'",
+        "http://localhost:3500/runAsync?EnvId='SXP'&Ver='0007'&ProcId=''&Activity=''&Fid='CAACD'",
         {
           method: "POST",
           mode: "no-cors",
