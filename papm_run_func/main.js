@@ -35,11 +35,9 @@
           }
         );
 
-        // const runResponse = await runRequest.json();
+        const runResponse = await runRequest.json();
 
-        const test = await runRequest;
-
-        console.log(test);
+        console.log(runResponse);
 
         return runResponse;
 
