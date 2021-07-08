@@ -35,9 +35,9 @@
           }
         );
 
-        const runResponse = await runRequest.json();
+        // const runResponse = await runRequest.json();
 
-        const test = runResponse;
+        const test = await runRequest;
 
         console.log(test);
 
@@ -45,6 +45,7 @@
 
         // return msg.value;
       } catch (status) {
+        console.log(status);
         new Error();
       }
       // fetch(
