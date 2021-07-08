@@ -51,6 +51,9 @@
         {
           method: "POST",
           mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain",
+          },
         }
       )
         .then((response) => response.text())
