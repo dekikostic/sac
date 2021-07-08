@@ -73,8 +73,8 @@
     set fid(fid) {
       this._shadowRoot.getElementById("builder_fid").value = fid;
     }
-    set act(act) {
-      this._shadowRoot.getElementById("builder_act").value = act;
+    set activity(activity) {
+      this._shadowRoot.getElementById("builder_activity").value = activity;
     }
     set proc_id(proc_id) {
       this._shadowRoot.getElementById("builder_proc_id").value = proc_id;
