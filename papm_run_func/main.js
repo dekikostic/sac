@@ -35,6 +35,10 @@
           }
         );
 
+        const runResponse = await runRequest.json();
+
+        return runResponse;
+
         // return msg.value;
       } catch (status) {
         new Error();
