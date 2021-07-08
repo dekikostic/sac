@@ -15,11 +15,11 @@
 					</tr>
           <tr>
 						<td>Process</td>
-						<td><input id="builder_proc" type="text" size="10" maxlength="7"></td>
+						<td><input id="builder_proc_id" type="text" size="10" maxlength="7"></td>
 					</tr>
           <tr>
 						<td>Activity</td>
-						<td><input id="builder_act" type="text" size="10" maxlength="5"></td>
+						<td><input id="builder_activity" type="text" size="10" maxlength="5"></td>
 					</tr>
 					<tr>
 						<td>Function ID</td>
@@ -56,7 +56,7 @@
               env_id: this.env_id,
               ver: this.ver,
               fid: this.fid,
-              act: this.act,
+              act: this.activity,
               prc_id: this.proc_id,
             },
           },
@@ -89,8 +89,8 @@
     get fid() {
       return this._shadowRoot.getElementById("builder_fid").value;
     }
-    get act() {
-      return this._shadowRoot.getElementById("builder_act").value;
+    get activity() {
+      return this._shadowRoot.getElementById("builder_activity").value;
     }
     get proc_id() {
       return this._shadowRoot.getElementById("builder_proc_id").value;
