@@ -37,6 +37,8 @@
 
         const runResponse = await runRequest.json();
 
+        const test = runResponse;
+
         return runResponse;
 
         // return msg.value;
