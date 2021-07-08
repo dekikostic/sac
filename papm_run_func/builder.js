@@ -56,7 +56,7 @@
               env_id: this.env_id,
               ver: this.ver,
               fid: this.fid,
-              act: this.activity,
+              activity: this.activity,
               prc_id: this.proc_id,
             },
           },
