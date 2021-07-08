@@ -13,6 +13,14 @@
 						<td>Version</td>
 						<td><input id="builder_ver" type="text" size="10" maxlength="4"></td>
 					</tr>
+          <tr>
+						<td>Process</td>
+						<td><input id="builder_proc" type="text" size="10" maxlength="7"></td>
+					</tr>
+          <tr>
+						<td>Activity</td>
+						<td><input id="builder_act" type="text" size="10" maxlength="5"></td>
+					</tr>
 					<tr>
 						<td>Function ID</td>
 						<td><input id="builder_fid" type="text" size="10" maxlength="5"></td>
@@ -48,6 +56,7 @@
               env_id: this.env_id,
               ver: this.ver,
               fid: this.fid,
+              act: this.act,
               prc_id: this.proc_id,
             },
           },
@@ -64,9 +73,12 @@
     set fid(fid) {
       this._shadowRoot.getElementById("builder_fid").value = fid;
     }
-    // set proc_id(proc_id) {
-    //   this._shadowRoot.getElementById("builder_proc_id").value = proc_id;
-    // }
+    set act(act) {
+      this._shadowRoot.getElementById("builder_act").value = act;
+    }
+    set proc_id(proc_id) {
+      this._shadowRoot.getElementById("builder_proc_id").value = proc_id;
+    }
 
     get env_id() {
       return this._shadowRoot.getElementById("builder_env_id").value;
@@ -77,9 +89,12 @@
     get fid() {
       return this._shadowRoot.getElementById("builder_fid").value;
     }
-    // get proc_id() {
-    //   return this._shadowRoot.getElementById("builder_proc_id").value;
-    // }
+    get act() {
+      return this._shadowRoot.getElementById("builder_act").value;
+    }
+    get proc_id() {
+      return this._shadowRoot.getElementById("builder_proc_id").value;
+    }
   }
 
   customElements.define("papm-run-func-builder", RunFunctionBuilderPanel);
