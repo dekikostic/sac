@@ -39,6 +39,8 @@
 
         const test = runResponse;
 
+        console.log(test);
+
         return runResponse;
 
         // return msg.value;
