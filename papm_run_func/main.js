@@ -50,10 +50,10 @@
         `${papmUrl}?EnvId='${this._props.env_id}'&Ver='${this._props.ver}'&ProcId=''&Activity=''&Fid='${this._props.fid}'`,
         {
           method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "text/plain",
-          },
+          // mode: "no-cors",
+          // headers: {
+          //   "Content-Type": "text/plain",
+          // },
         }
       )
         .then((response) => response.text())
